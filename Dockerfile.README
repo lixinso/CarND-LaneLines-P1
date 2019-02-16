@@ -1,0 +1,1 @@
+docker build . -t carnd_p1_lanelines -f Dockerfile
