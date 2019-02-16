@@ -11,8 +11,13 @@ RUN DEBIAN_FRONTEND=noninteractive apt install -y python3-notebook
 
 RUN apt install -y ipython3
 RUN pip3 install  jupyter
-
 RUN pip3 install 'prompt-toolkit<2.0.0,>=1.0.15' --force-reinstall
+RUN pip3 install pillow
+RUN pip install opencv-python
+RUN pip install moviepy
+RUN pip install matplotlib
+RUN apt install -y libsm6 libxext6 libxrender-dev
+
 
 RUN mkdir /mydir
 VOLUME ["/mydir"]
